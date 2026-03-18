@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Downloader</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Downloader</h1>
+
+    <input type="text" id="url" placeholder="Enter YouTube URL" />
+    <button onclick="fetchInfo()">Fetch Info</button>
+
+    <div id="preview" class="hidden">
+      <img id="thumbnail" />
+      <h3 id="title"></h3>
+
+      <select id="quality">
+        <option value="lowest">144p</option>
+        <option value="medium">360p</option>
+        <option value="highest">720p+</option>
+      </select>
+
+      <button onclick="download('video')">Download Video</button>
+      <button onclick="download('audio')">Download Audio</button>
+    </div>
+
+    <p id="status"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
